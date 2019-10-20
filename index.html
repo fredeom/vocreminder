@@ -1,0 +1,58 @@
+<html>
+  <head>
+    <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-firestore.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/domready/1.0.8/ready.min.js"></script>
+    <script src="./app.js"></script>
+    <link rel="stylesheet" href="app.css">
+  </head>
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+  https://firebase.google.com/docs/web/setup#available-libraries -->
+  <body>
+    <div id="container" class="br">
+      <select id="dicts" class="br">
+        <option selected disabled>Выберите словарь</option>
+      </select>
+      <hr/>
+      <div id="add_dict">
+        <a href="#"><span class="undline">Добавить</span> / <span class="undline">удалить</span> словарь</a>
+      </div>
+      <div id="add_dict_panel" class="hide_01">
+        <button id="add_dict_plus" class="br">&#10004;</button>
+        <input id="add_dict_input" placeholder="Название словаря" class="br"></input>
+        <button id="add_dict_minus" class="br">X</button>
+      </div>
+      <hr/>
+      <div class="start_course_controls">
+        <button id="start_study" class="br">Учить</button> |
+        <a id="edit_words" href="#"><span class="undline">Обновить</span> словарь</a>
+      </div>
+      <hr/>
+      <div id="edit_view" class="hide_01">
+        <input id="filter_edit_view" placeholder="Введите фильтр (часть сл.)" class="br"/>
+        <div id="words_cloud">
+          some, foreign, words, to, learn,
+          some, foreign, words, to, learn,
+          some, foreign, words, to, learn,
+          some, foreign, words, to, learn,
+          some, foreign, words, to, learn,
+          some, foreign, words, to, learn,
+          some, foreign, words, to, learn,
+          some, foreign, words, to, learn,
+          some, foreign, words, to, learn,
+          some, foreign, words, to, learn,
+          some, foreign, words, to, learn,
+          some, foreign, words, to, learn,
+          some, foreign, words, to, learn,
+          some, foreign, words, to, learn,
+          some, foreign, words, to, learn,
+        </div>
+        <div id="edit_word_panel" class="hide_01">
+          <button id="edit_word_plus" class="br">&#10004;</button>
+          <input id="edit_word_input" placeholder="Введите слово" class="br"></input>
+          <button id="edit_word_minus" class="br">X</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

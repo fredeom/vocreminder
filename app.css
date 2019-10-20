@@ -1,0 +1,110 @@
+body {
+  background: #789696;
+}
+
+*:focus {
+    outline: none;
+}
+
+a {
+  color: gray;
+  text-decoration: none;
+}
+
+.br {
+  border: 2px solid #608080;
+  border-radius: 10px;
+}
+
+.undline {
+  text-decoration: underline;
+}
+
+.undline:hover {
+  text-decoration-color: cyan;
+}
+
+button:hover {
+  box-shadow: 0 2px 5px gray;
+}
+
+button:active {
+  box-shadow: 0 -2px 10px green;
+  transform: translateY(2px);
+}
+
+#container {
+  background: #f0f0f0;
+  width: 200px;
+  margin: auto;
+  padding: 10px;
+  text-align: center;
+}
+
+#add_dict, #add_dict_panel, .start_course_controls, #words_cloud, #edit_word_panel {
+  margin-top: 10px;
+}
+
+#add_dict_panel {
+  flex-flow: raw wrap;
+  justifyContent: space-between;
+}
+
+.hide_01 {
+  display: none;
+}
+
+.show_01 {
+  display: flex;
+  animation: show_panel 1s;
+}
+
+.show_02 {
+  display: blcok;
+  animation: show_panel 1s, show_panel_2 0.5s;
+}
+
+@keyframes show_panel {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes show_panel_2 {
+  from {width: 0;}
+  to {width: 100%;}
+}
+
+
+#add_dict_input, #edit_word_input {
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-left: 5px;
+  width: 80px;
+  flex-grow: 1;
+}
+
+#add_dict_plus, #edit_word_plus {
+  background: rgba(25, 81, 179, 0.5);
+  color: green;
+}
+
+#add_dict_minus, #edit_word_minus {
+  background: rgba(200, 0, 0, 0.5);
+  color: yellow;
+}
+
+#filter_edit_view {
+  margin: auto;
+  padding-left: 5px;
+}
+
+#words_cloud {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+#edit_word_panel {
+  flex-flow: raw wrap;
+  justifyContent: space-between;
+}
+
