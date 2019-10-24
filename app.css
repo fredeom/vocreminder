@@ -1,5 +1,6 @@
 body {
   background: #789696;
+  margin: 0;
 }
 
 *:focus {
@@ -41,7 +42,7 @@ button:active {
   text-align: center;
 }
 
-#add_dict, #add_dict_panel, .start_course_controls, #words_cloud, #edit_word_panel {
+#container, #add_dict, #add_dict_panel, .start_course_controls, #words_cloud, #edit_word_panel, #edit_translations {
   margin-top: 10px;
 }
 
@@ -98,9 +99,10 @@ button:active {
   padding-left: 5px;
 }
 
-#words_cloud {
+#words_cloud, #edit_translations {
   max-height: 200px;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 #edit_word_panel {
@@ -108,3 +110,7 @@ button:active {
   justifyContent: space-between;
 }
 
+#edit_translations > input {
+  margin-top: 5px;
+  padding-left: 5px;
+}

@@ -3,6 +3,7 @@
     <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-firestore.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/domready/1.0.8/ready.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/javascript-debounce@1.0.1/dist/javascript-debounce.min.js"></script>
     <script src="./app.js"></script>
     <link rel="stylesheet" href="app.css">
   </head>
@@ -47,12 +48,22 @@
           some, foreign, words, to, learn,
           some, foreign, words, to, learn,
         </div>
+        <hr/>
         <div id="edit_word_panel" class="hide_01">
           <button id="edit_word_plus" class="br">&#10004;</button>
           <input id="edit_word_input" placeholder="Введите слово" class="br"></input>
           <button id="edit_word_minus" class="br">X</button>
         </div>
+        <div id="edit_translations" class="hide_01">
+          <input class="br"/>
+          <input class="br"/>
+          <input class="br"/>
+        </div>
       </div>
     </div>
+    <center style="position: fixed; bottom: 20px; left: 45%;">
+      <button id="test1">Test create</button>
+      <button id="test2">Test edit</button>
+    </center>
   </body>
 </html>
