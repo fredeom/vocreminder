@@ -1,5 +1,7 @@
+<!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8" />
     <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-firestore.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/domready/1.0.8/ready.min.js"></script>
@@ -20,50 +22,37 @@
       </div>
       <div id="add_dict_panel" class="hide_01">
         <button id="add_dict_plus" class="br">&#10004;</button>
-        <input id="add_dict_input" placeholder="Название словаря" class="br"></input>
+        <input id="add_dict_input" placeholder="Название словаря" class="br" autocomplete="off" />
         <button id="add_dict_minus" class="br">X</button>
       </div>
       <hr/>
       <div class="start_course_controls">
         <button id="start_study" class="br">Учить</button> |
         <a id="edit_words" href="#"><span class="undline">Обновить</span> словарь</a>
+        <div id="start_course_warning" class="hide_01">Должен быть выбран словарь</div>
       </div>
       <hr/>
       <div id="edit_view" class="hide_01">
-        <input id="filter_edit_view" placeholder="Введите фильтр (часть сл.)" class="br"/>
-        <div id="words_cloud">
-          some, foreign, words, to, learn,
-          some, foreign, words, to, learn,
-          some, foreign, words, to, learn,
-          some, foreign, words, to, learn,
-          some, foreign, words, to, learn,
-          some, foreign, words, to, learn,
-          some, foreign, words, to, learn,
-          some, foreign, words, to, learn,
-          some, foreign, words, to, learn,
-          some, foreign, words, to, learn,
-          some, foreign, words, to, learn,
-          some, foreign, words, to, learn,
-          some, foreign, words, to, learn,
-          some, foreign, words, to, learn,
-          some, foreign, words, to, learn,
-        </div>
+        <input id="filter_edit_view" placeholder="Введите фильтр (часть сл.)" class="br" autocomplete="off" />
+        <div id="words_cloud"></div>
         <hr/>
         <div id="edit_word_panel" class="hide_01">
           <button id="edit_word_plus" class="br">&#10004;</button>
-          <input id="edit_word_input" placeholder="Введите слово" class="br"></input>
+          <input id="edit_word_input" placeholder="Введите слово" class="br" autocomplete="off" />
           <button id="edit_word_minus" class="br">X</button>
         </div>
-        <div id="edit_translations" class="hide_01">
-          <input class="br"/>
-          <input class="br"/>
-          <input class="br"/>
-        </div>
+        <div id="edit_translations" class="hide_01"></div>
+      </div>
+      <div id="study_view" class="hide_01">
+        <button id="study_word" class="br">&ndash;&ndash;</button>
+        <input id="study_translation" class="br" placeholder="Вставьте перевод" autocomplete="off" />
+        <ul id="study_results_view" />
       </div>
     </div>
-    <center style="position: fixed; bottom: 20px; left: 45%;">
+    <div id="test_block">
       <button id="test1">Test create</button>
       <button id="test2">Test edit</button>
-    </center>
+      <button id="test3">Test study</button>
+    </div>
   </body>
 </html>
