@@ -256,7 +256,7 @@ domready(() => {
     edit_word_plus_fire: () => {
       const edit_word_input_value = document.getElementById("edit_word_input").value;
       const translations = [...document.getElementById('edit_translations').querySelectorAll('input')].map(item => item.value).filter(item => !!item);
-      db.collection('dicts').doc(selectedName).collection('words').doc(edit_word_input_value).set({up: 0, down: 0, translations})
+      db.collection('dicts').doc(selectedName).collection('words').doc(edit_word_input_value).set({up: 3, down: 3, translations})
       .then(() => db.collection('dicts').doc(selectedName).update({words: firebase.firestore.FieldValue.arrayUnion(edit_word_input_value)}))
       .then(() => actions.words_cloud_refresh(selectedName))
       .catch(error => console.log(error));
